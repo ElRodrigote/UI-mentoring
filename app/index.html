@@ -1,0 +1,60 @@
+<!doctype html>
+	<html lang="en" >
+  		<head>
+		    <meta charset="utf-8">
+		    <title>Google Phone Gallery</title>
+		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		    <link rel="stylesheet" href="app.css" />
+
+		    <script src="bower_components/angular/angular.js"></script>
+		    <script src="app.js"></script>
+		    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    	</head>
+  		
+    	<header>
+    		<nav class="navbar navbar-dark bg-dark" role="navigation">
+  				<div class="navbar-header">
+  					<a class="navbar-brand" ui-sref="#" style="color: white;">TallerTech UI mentoring</a>
+  				</div>
+  				<ul class="navbar-nav mr-auto">
+  					<li class="nav-item"><a class="nav-link" ui-sref="home">Home</a></li>
+  				</ul>
+  			</nav>
+    	</header>
+
+  		<body ng-app="phonecatApp">
+  			
+
+			<div class="container-fluid">
+				<div ui-view></div>
+			</div>
+		</body>
+
+		<!--<body ng-controller="HotelListController">
+			<div class="container-fluid">
+				<div class="card-deck-wrapper">
+					<div class="card-deck">
+						<div class="card hotel-card" ng-repeat="hotel in hotels">
+							<div class="card-block">
+								<div class="hotel-card-image"><img class="card-img-top" ng-src="{{hotel.picture}}"></div>
+					        	<div class="hotel-card-content">
+					        		<h6 class="card-header">{{hotel.name}}</h6>
+					        		<div class="hotel-card-description">
+					        			<p class="card-text">{{hotel.description | limitTo: 140}}<strong><span ng-if="hotel.description.length > 140">...</span></strong></p>
+					        		</div>
+							        <div class="hotel-card-content-serviceBottom">
+							        	<i ng-repeat="star in getElements(hotel.rating) track by $index" class="fa fa-star fa-fw"></i>
+							        	<p>Servicios:</p>
+							        	<span ng-repeat="service in hotel.services"><img class="imgIcon" ng-src="{{service.icon}}">&nbsp;</span> 
+							        </div>
+					        	</div>
+					        	
+						    </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</body> -->
+
+	</html>

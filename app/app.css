@@ -1,0 +1,57 @@
+.navbar{
+	border-radius: 0;
+}
+
+.card-deck a{
+	margin: 0;
+	padding: 0;
+}
+
+/*Card box and contents styles*/
+.hotel-card{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 460px;
+    text-align: center;
+    min-width: 260px;
+    max-width: 300px;
+    margin-bottom: 1.5em;
+}
+
+.hotel-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #e0e0e0;
+}
+
+.hotel-card-image{
+	overflow: hidden;
+	max-width: 100%;
+	height: 110px;
+}
+
+.hotel-card-description{
+	max-height: 70%;
+}
+
+.hotel-card-content-serviceBottom{
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.hotel-card-content-serviceBottom p{
+	margin-bottom: 0px;
+}
+
+.fa-star{
+	color: #ffbe28;
+	font-size: 1.25em;
+}
+
+.imgIcon{
+	max-height: 2em;
+	max-width: 2em;
+	align-self: baseline;
+}
+
