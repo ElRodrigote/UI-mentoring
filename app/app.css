@@ -1,47 +1,24 @@
+body{
+	background-color: lightgray;
+}
+
+ul{
+	margin: 1.25em;
+	display: block;
+	list-style-type: none;
+}
+
+div, h3{
+	padding: 0;
+	margin: 0;
+}
+
+img{
+	vertical-align: middle;
+}
+
 .navbar{
 	border-radius: 0;
-}
-
-.card-deck a{
-	margin: 0;
-	padding: 0;
-}
-
-/*Card box and contents styles*/
-.hotel-card{
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    height: 460px;
-    text-align: center;
-    min-width: 260px;
-    max-width: 300px;
-    margin-bottom: 1.5em;
-}
-
-.hotel-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    background-color: #e0e0e0;
-}
-
-.hotel-card-image{
-	overflow: hidden;
-	max-width: 100%;
-	height: 110px;
-}
-
-.hotel-card-description{
-	max-height: 70%;
-}
-
-.hotel-card-content-serviceBottom{
-	text-align: center;
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-}
-
-.hotel-card-content-serviceBottom p{
-	margin-bottom: 0px;
 }
 
 .fa-star{
@@ -52,6 +29,115 @@
 .imgIcon{
 	max-height: 2em;
 	max-width: 2em;
-	align-self: baseline;
 }
+
+.main-wrapper{
+	margin-top: .25em;
+	margin-bottom: 0;
+}
+/*Card box and contents styles*/
+
+li.hotel-wrapper{
+	padding: 5px;
+	margin-bottom: 3px; 
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    height: 180px;
+    background-color: #fff;
+}
+
+li.hotel-wrapper:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+
+li.hotel-wrapper .hotel-card-picture{
+	float: left;
+	margin: 0.5em;
+	width: 100%;
+	overflow: hidden;
+
+}
+
+li.hotel-wrapper .hotel-card-picture img{
+	background: #f7f7f7;
+	border-radius: 4px;
+	max-width: 100%;
+}
+
+li.hotel-wrapper .hotel-card-content{
+	float: left;
+	padding-left: 0.3em;
+	overflow: hidden;
+}
+
+li.hotel-wrapper .hotel-card-content .hotel-card-name{
+	width: 100%;
+	height: 34px;
+	line-height: 1;
+	overflow: hidden;
+	border: 0!important;
+	background: none!important;
+	padding: 5px 0 3px!important;
+	margin: 0!important;
+}
+
+li.hotel-wrapper .hotel-card-content .hotel-card-name h3{
+	float: left;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 69%;
+}
+
+li.hotel-wrapper .hotel-card-content .hotel-card-description{
+	overflow: hidden;
+	display: block;
+	padding: 5px 0 0 1px;
+	line-height: 1.4;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+li.hotel-wrapper .hotel-card-content .stars{
+	overflow: hidden;
+	margin: 0 0 0.2em 0.1em;
+	height: 1.9em;
+	display: inline-block;
+}
+
+li.hotel-wrapper .hotel-card-content .hotel-card-content-footer{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0.5em;
+	display: inline-block;
+}
+
+
+li.hotel-wrapper .hotel-card-content .hotel-card-content-services{
+	width: 100%;
+	left: 0.5em;
+	display: inline;
+	position: absolute;
+	bottom: 0;
+}
+
+li.hotel-wrapper .hotel-card-content div.call-to-action{
+	position: relative;
+	float: right;
+	margin: 0 0.5em 0 0;
+	padding: 0;
+}
+
+
 

@@ -1,22 +1,29 @@
-	<div class="card-deck-wrapper">
-		<div class="card-deck">
-			<a ui-sref=".hotel-selected" ng-repeat="hotel in hotels">
-				<div class="card hotel-card" id="{{hotel.id}}" >
-					<div class="card-block">
-						<div class="hotel-card-image"><img class="card-img-top" ng-src="{{hotel.picture}}"></div>
-						<div class="hotel-card-content">
-							<h6 class="card-header">{{hotel.name}}</h6>
-							<div class="hotel-card-description">
-								<p class="card-text">{{hotel.description | limitTo: 140}}<strong><span ng-if="hotel.description.length > 140">...</span></strong></p>
-							</div>
-							<div class="hotel-card-content-serviceBottom">
-								<i ng-repeat="star in getElements(hotel.rating) track by $index" class="fa fa-star fa-fw"></i>
-								<p>Servicios:</p>
-								<span ng-repeat="service in hotel.services"><img class="imgIcon" ng-src="{{service.icon}}">&nbsp;</span> 
-							</div>
-						</div>
-					</div>
+<ul class="container">	
+	<li class="hotel-wrapper row" ng-repeat="hotel in hotels">
+		<div class="hotel-card-picture col-md-3 col-sm-5">
+			<img ng-src="{{hotel.picture}}">
+		</div> 
+		<div class="hotel-card-content col-md-8 col-sm-6">
+			<div class="hotel-card-name">
+				<h3>{{hotel.name}}</h3>
+			</div>
+			<div class="hotel-card-description">
+				{{hotel.description}}
+			</div>
+			<span class="stars">
+				<i ng-repeat="star in getElements(hotel.rating) track by $index" class="fa fa-star fa-fw"></i>
+			</span>
+			<div class="hotel-card-content-footer row">
+				<div class="hotel-card-content-services col-md-7 col-sm-12">
+					<span ng-repeat="service in hotel.services">
+						<img class="imgIcon" ng-src="{{service.icon}}">&nbsp;
+					</span> 
 				</div>
-			</a>
+				<div class="call-to-action col-md-4 col-sm-12">
+					<a href="" class="btn btn-primary">View hotel</a>
+				</div>
+			</div>
+			
 		</div>
-	</div>
+	</li>
+</ul>
