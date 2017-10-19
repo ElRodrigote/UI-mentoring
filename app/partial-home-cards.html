@@ -19,8 +19,8 @@
 						<img class="imgIcon" ng-src="{{service.icon}}">&nbsp;
 					</span> 
 				</div>
-				<div class="call-to-action col-md-4 col-sm-12">
-					<a href="" class="btn btn-primary">View hotel</a>
+				<div class="call-to-action col-md-4 col-sm-12" ng-controller="HotelModuleController">
+					<a href="" ng-click="hotelDialog(hotel)" class="btn btn-primary">View hotel</a>
 				</div>
 			</div>
 			

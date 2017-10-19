@@ -1,3 +1,7 @@
+html{
+	font-family: Arial,Helvetica,Sans,Sans-Serif,Sans Serif;
+}
+
 body{
 	background-color: lightgray;
 }
@@ -35,6 +39,7 @@ img{
 	margin-top: .25em;
 	margin-bottom: 0;
 }
+
 /*Card box and contents styles*/
 
 li.hotel-wrapper{
@@ -51,7 +56,6 @@ li.hotel-wrapper{
 li.hotel-wrapper:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     background-color: #eaeaea;
-    cursor: pointer;
 }
 
 
@@ -140,4 +144,54 @@ li.hotel-wrapper .hotel-card-content div.call-to-action{
 }
 
 
+/*NgDialog module styles*/
+div.ngdialog-content{
+	width: 80%!important;
+	border-radius: 10px!important;
+	padding: 0 0 0.06em 0!important;
+}
 
+div.ngdialog-overlay{
+	background: rgba(0,0,0,.8)!important;
+}
+
+div.ngdialog-content .hotel-module-image{
+	margin: 0;
+	padding: 0;
+	height: 140px;
+	overflow: hidden;
+	border: solid #ccc 1px;
+}
+
+div.ngdialog-content .hotel-module-image, .hotel-module-image>img{
+	width: 100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+}
+
+div.ngdialog-content .hotel-module-information{
+	width: 96%;
+	margin: 1% 2% 2% 2%;
+	padding: 1% 2% 1% 2%;
+	border: solid #ccc 1px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+div.ngdialog-content .hotel-module-information > h3{
+	width: 100%;
+	border-bottom: solid #ccc 1px;
+}
+
+iv.ngdialog-content .hotel-module-information > p{
+	font-size: 0.8em;
+}
+
+div.ngdialog-content .hotel-module-information > h6{
+	font-weight: bold;
+}
+
+div.ngdialog-content .hotel-module-information .service-name{
+	font-size: 0.7em;
+}
