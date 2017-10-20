@@ -200,3 +200,12 @@ div.ngdialog-content .hotel-module-information > h6{
 div.ngdialog-content .hotel-module-information .service-name{
 	font-size: 0.7em;
 }
+
+div.hotel-module-reservation{
+	margin-bottom: 2em;
+}
+
+div.hotel-module-reservation .hotel-module-reservation-button{
+	float: right;
+	font-weight: bold;
+}

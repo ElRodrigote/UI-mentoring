@@ -9,8 +9,13 @@
 		<div class="row" >
 			<span class="hotel-module-information-services" ng-repeat="service in hotel.services">
 				<img class="imgIconModal col-md-2 col-sd-2" ng-src="{{service.icon}}">
-				<span class="service-name col-md-3 col-sm-3">{{service.name}}</span>
+				<span class="service-name col-md-3 col-sm-3">{{service.name}}</span>&nbsp;<span>|</span>
 			</span>
-		</div> 
+		</div>
+		<div class="hotel-module-reservation">
+			<h6>Habitaciones disponibles:</h6>
+			<span>{{hotel.rooms}}</span>
+			<a href="" class="btn btn-primary hotel-module-reservation-button">Reservar habitación</a>
+		</div> 	
 	</div>
 </div>
