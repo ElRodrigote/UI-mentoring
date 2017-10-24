@@ -4,6 +4,9 @@
 	</div>
 	<div class="hotel-module-information">
 		<h3>{{hotel.name}}</h3>
+		<span class="stars">
+			<i ng-repeat="star in getElements(hotel.rating) track by $index" class="fa fa-star fa-fw"></i>
+		</span>
 		<p>{{hotel.description}}</p>
 		<h6>Servicios principales:</h6>
 		<div class="row" >
@@ -15,7 +18,7 @@
 		<div class="hotel-module-reservation">
 			<h6>Habitaciones disponibles:</h6>
 			<span>{{hotel.rooms}}</span>
-			<a href="" class="btn btn-primary hotel-module-reservation-button">Reservar habitación</a>
+			<a href="" ng-click="updateHotelRoom(hotel.id)" class="btn btn-primary hotel-module-reservation-button">Reservar habitación</a>
 		</div> 	
 	</div>
 </div>

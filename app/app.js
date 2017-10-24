@@ -27,9 +27,12 @@ uiMentoring.controller('HotelListController', function HotelListController($scop
     url: 'http://192.168.5.106:3000/hotels/'
     }).then(function successCallback(response) {
       $scope.hotels = response.data;
+      Rooms.populateHotels($scope.hotels);
     }, function errorCallback(response) {
       console.log(response);
-    });
+  });
+
+  //Rooms.populateHotels($scope.hotels);
 
     $scope.hotelDialog = function(hotel){
       Hotel.setHotelId(hotel.id);
@@ -41,7 +44,7 @@ uiMentoring.controller('HotelListController', function HotelListController($scop
       });
     };
 
-    $scope.getElements = function(arg){
+   $scope.getElements = function(arg){
       return new Array(arg);
     }
 });
@@ -52,12 +55,26 @@ uiMentoring.controller("HotelModuleController", function ($scope, $http, Hotel){
     url: 'http://192.168.5.106:3000/hotels/' + Hotel.getHotelId()
     }).then(function successCallback(response) {
       $scope.hotel = response.data;
+      
     }, function errorCallback(response) {
       console.log(response);
-    });
   });
 
-uiMentoring.service("Hotel", function($http, $rootScope, $stateParams){
+  $scope.updateHotelRoom = function(){
+    if($scope.hotel.rooms > 0){
+      $scope.hotel.rooms -= 1;
+    }else{
+      alert("¡No hay más habitaciones disponibles!");
+    }
+  }
+
+  $scope.getElements = function(arg){
+    return new Array(arg);
+  }
+
+});
+
+uiMentoring.service("Hotel", function($http, $stateParams){
   var hotel = {};
   hotel.id = "";
 
@@ -71,4 +88,40 @@ uiMentoring.service("Hotel", function($http, $rootScope, $stateParams){
 
   return hotel;
 });
+
+
+/*uiMentoring.service("Rooms", function Rooms($http, $stateParams){
+  var hotelRooms = {};
+  hotelRooms.rooms = [];
+  
+  hotelRooms.populateHotels = function(hotelArray){
+    hotelArray.forEach(function(hotel){
+      hotelRooms.rooms.push({id: hotel.id, roomCount:hotel.rooms});  
+    })
+  };
+  
+  hotelRooms.setRooms = function(arg){
+    console.log(arg);
+    var found = hotelRooms.rooms.findIndex(hotel => hotel.id === arg.id);
+    if( found != -1){
+      hotelRooms.rooms[found].roomCount = arg.roomCount;
+    }
+  };
+
+  hotelRooms.getRooms = function(){
+    return hotelRooms.rooms;
+  };
+
+  hotelRooms.fetchRooms = function(hotelId){
+    var found = hotelRooms.rooms.findIndex(hotel => hotel.id === hotelId);
+
+    if(found != -1){
+      return hotelRooms.rooms[found];
+    }else{
+      alert(" !");
+    }
+  };
+
+  return hotelRooms;
+});*/
 
